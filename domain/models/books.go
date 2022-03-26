@@ -1,9 +1,8 @@
-package book
+package models
 
 import (
 	"encoding/json"
 	"fmt"
-	"homework3/author"
 	"io/ioutil"
 	"os"
 
@@ -12,14 +11,14 @@ import (
 
 type Book struct {
 	gorm.Model
-	Name      string        `json:"Name"`
-	Pages     uint64        `json:"Pages"`
-	Stocks    uint64        `json:"Stocks"`
-	Price     uint64        `json:"Price"`
-	StockCode string        `json:"StockCode"`
-	ISBN      string        `json:"ISBN"`
-	Author_ID uint64        `json:"Author_ID"`
-	Author    author.Author `gorm:"foreignKey:Author_ID"  json:"Author"`
+	Name      string `json:"Name"`
+	Pages     uint64 `json:"Pages"`
+	Stocks    uint64 `json:"Stocks"`
+	Price     uint64 `json:"Price"`
+	StockCode string `json:"StockCode"`
+	ISBN      string `json:"ISBN"`
+	Author_ID uint64 `json:"Author_ID"`
+	Author    Author `gorm:"foreignKey:Author_ID"  json:"Author"`
 }
 
 type BookSlice struct {
@@ -45,8 +44,8 @@ func (b *BookSlice) ConvertBook() []Book {
 	return books
 }
 
-func (b *BookSlice) ExtractAuthor() []author.Author {
-	var authors []author.Author
+func (b *BookSlice) ExtractAuthor() []Author {
+	var authors []Author
 	for _, eachAuthor := range b.Books {
 		authors = append(authors, eachAuthor.Author)
 	}

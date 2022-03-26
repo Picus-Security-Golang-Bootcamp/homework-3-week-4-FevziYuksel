@@ -1,4 +1,4 @@
-package author
+package models
 
 import (
 	"fmt"
@@ -9,6 +9,7 @@ import (
 type Author struct {
 	gorm.Model
 	Author_Name string `json:"Author_Name"`
+	Book        []Book
 }
 type AuthorSlice []Author
 
