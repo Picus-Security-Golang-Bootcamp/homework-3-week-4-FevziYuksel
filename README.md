@@ -1,4 +1,4 @@
-# Homework-3 | Week 4 | Booklist App
+# Homework 3 Week 4
 
 ## Overview
 
