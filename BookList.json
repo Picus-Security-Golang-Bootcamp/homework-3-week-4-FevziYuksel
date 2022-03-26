@@ -1,7 +1,7 @@
 {
     "Books": [
         {
-            "Book_ID":          1,
+            
             "Name":      "Clean Code",
             "Pages":     462,
             "Stocks":    100,
@@ -11,12 +11,10 @@
             "Author_ID" : 1,
             "Author":
             {
-                "Author_ID" : 1,
                 "Author_Name": "Robert C. Martin"
             }
         },
         {
-            "Book_ID":          2,
             "Name":      "The C programming language",
             "Pages":     238,
             "Stocks":    200,
@@ -26,12 +24,11 @@
             "Author_ID" : 2,
             "Author":
             {
-                "Author_ID" : 2,
                 "Author_Name": "Dennis M. Ritchie"
             }
         },
         {
-            "Book_ID":          3,
+            
             "Name":      "Effective Java",
             "Pages":     413,
             "Stocks":    100,
@@ -41,12 +38,11 @@
             "Author_ID" : 3,
             "Author":
             {
-                "Author_ID" : 3,
                 "Author_Name": "Joshua Bloch"
             }
         },
         {
-            "Book_ID":          4,
+            
             "Name":      "C++ Primer",
             "Pages":     1399,
             "Stocks":    50,
@@ -56,7 +52,6 @@
             "Author_ID" : 4,
             "Author":
             {
-                "Author_ID" : 4,
                 "Author_Name": "Stanley B. Lippman"
             }
         }

@@ -12,7 +12,6 @@ import (
 
 type Book struct {
 	gorm.Model
-	Book_ID   uint64        `json:"Book_ID"` //gorm:"primaryKey"
 	Name      string        `json:"Name"`
 	Pages     uint64        `json:"Pages"`
 	Stocks    uint64        `json:"Stocks"`
@@ -20,7 +19,7 @@ type Book struct {
 	StockCode string        `json:"StockCode"`
 	ISBN      string        `json:"ISBN"`
 	Author_ID uint64        `json:"Author_ID"`
-	Author    author.Author `gorm:"foreignKey:Author_ID"  json:"Author"` //gorm:"embedded"
+	Author    author.Author `gorm:"foreignKey:Author_ID"  json:"Author"`
 }
 
 type BookSlice struct {
