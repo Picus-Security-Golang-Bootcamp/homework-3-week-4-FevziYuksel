@@ -29,11 +29,11 @@ func (a *AuthorRepository) InsertSampleData(authors []Author) {
 	}
 }
 
-// func (a *AuthorRepository) GetAuthorWithBookInformation() ([]Author, error) {
-// 	var authors []Author
-// 	result := a.db.Preload("Book").Find(&authors)
-// 	if result.Error != nil {
-// 		return nil, result.Error
-// 	}
-// 	return authors, nil
-// }
+func (a *AuthorRepository) GetAuthorWithBookInformation() ([]Author, error) {
+	var authors []Author
+	result := a.db.Preload("Book").Find(&authors)
+	if result.Error != nil {
+		return nil, result.Error
+	}
+	return authors, nil
+}
